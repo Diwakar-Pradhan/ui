@@ -4,7 +4,6 @@ import { DataTable } from "./components/DataTable";
 
 function App() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   return (
     <div style={{ padding: "20px" }}>
@@ -12,12 +11,12 @@ function App() {
 
       <h2 className="my-2">InputField</h2>
       <InputField
-        label="Loading Input"
-        placeholder="Please wait..."
-        value=""
-        onChange={() => {}}
-        loading
-        variant="filled"
+        label="Email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        helperText="This will be visible to others"
+        variant="outlined"
         size="md"
       />
 
