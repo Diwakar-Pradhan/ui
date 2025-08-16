@@ -1,7 +1,22 @@
 {
-  "build": {
-    "env": {
-      "NODE_ENV": "development"
+  "version": 2,
+  "builds": [
+    {
+      "src": "ui/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "ui/dist"
+      }
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "buildCommand": "cd ui && npm run build",
+  "outputDirectory": "ui/dist",
+  "devCommand": "cd ui && npm run dev",
+  "installCommand": "cd ui && npm install"
 }
