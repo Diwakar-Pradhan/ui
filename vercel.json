@@ -1,21 +1,8 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "ui/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "ui/storybook-static"
+  {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/ui/storybook-static/$1"
-    }
-  ],
-  "buildCommand": "cd ui && npm run build-storybook",
-  "outputDirectory": "ui/storybook-static",
-  "installCommand": "cd ui && npm install"
-}
+    ]
+  }
