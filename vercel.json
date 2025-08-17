@@ -5,7 +5,7 @@
       "src": "ui/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "ui/storybook-static"
+        "distDir": "storybook-static"
       }
     }
   ],
@@ -16,6 +16,6 @@
     }
   ],
   "buildCommand": "cd ui && npm run build-storybook",
-  "outputDirectory": "ui/storybook-static",
+  "outputDirectory": "storybook-static",
   "installCommand": "cd ui && npm install"
 }
