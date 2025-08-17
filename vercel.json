@@ -1,8 +1,8 @@
-  {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ]
-  }
+{
+  "builds": [
+    {
+      "src": "ui/package.json",
+      "config": { "distDir": "ui/storybook-static" }
+    }
+  ]
+}
